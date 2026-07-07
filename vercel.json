@@ -1,0 +1,55 @@
+{
+  "version": 2,
+  "functions": {
+    "api/cv-bulk-analyze.ts": {
+      "maxDuration": 120,
+      "memory": 1024
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/login",
+      "destination": "/api/login"
+    },
+    {
+      "source": "/api/stats",
+      "destination": "/api/stats"
+    },
+    {
+      "source": "/api/search",
+      "destination": "/api/search"
+    },
+    {
+      "source": "/api/history",
+      "destination": "/api/history"
+    },
+    {
+      "source": "/api/history/:id",
+      "destination": "/api/history/[id]"
+    },
+    {
+      "source": "/api/favorites",
+      "destination": "/api/favorites"
+    },
+    {
+      "source": "/api/favorites/:id",
+      "destination": "/api/favorites/[id]"
+    },
+    {
+      "source": "/api/connectors/health",
+      "destination": "/api/connectors/health"
+    },
+    {
+      "source": "/api/linkedin/search",
+      "destination": "/api/linkedin/search"
+    },
+    {
+      "source": "/api/linkedin/profiles",
+      "destination": "/api/linkedin/profiles"
+    },
+    {
+      "source": "/((?!api/).*)",
+      "destination": "/index.html"
+    }
+  ]
+}
